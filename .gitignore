@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.log
+
+# Virtual environments
+venv/
+.env
+.env.*
+
+# ML / OCR
+models/
+weights/
+uploads/
+processed/
+
+# OS
+.DS_Store
+Thumbs.db
