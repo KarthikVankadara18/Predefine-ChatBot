@@ -1,0 +1,142 @@
+/* Custom styles for Agentic Document AI */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.document-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.document-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.split-screen > * {
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+}
+
+/* Split screen layout */
+.split-screen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+.overflow-auto::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.overflow-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.overflow-auto::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.overflow-auto::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Confidence indicators */
+.confidence-high {
+  border-color: #10b981;
+  background-color: #f0fdf4;
+}
+
+.confidence-medium {
+  border-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.confidence-low {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+/* Hover effects */
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* High confidence styling */
+.high-confidence {
+  border-color: #10b981 !important;
+  background-color: #f0fdf4 !important;
+}
+
+/* Medium confidence styling */
+.medium-confidence {
+  border-color: #f59e0b !important;
+  background-color: #fffbeb !important;
+}
+
+/* Low confidence styling */
+.low-confidence {
+  border-color: #ef4444 !important;
+  background-color: #fef2f2 !important;
+}
